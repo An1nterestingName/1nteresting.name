@@ -24,3 +24,6 @@ You can now confirm that you are adding my RSS Feed, which should then appear in
 
 ## Blog
 `https://1nteresting.name/blog.xml`
+
+## Scribbles
+`https://1nteresting.name/scribbles.xml`

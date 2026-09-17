@@ -147,6 +147,20 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
           slug: (opts?.rssSlug ?? "blog") as FullSlug,
           ext: ".xml",
         })
+
+        yield write({
+          ctx,
+          content: generateRSSFeed(
+            "Scribbles",
+            "Last 10 Scribbles from 1nteresting.name",
+            "An1nterestingName's Scribbles",
+            cfg,
+            linkIndex,
+            opts.rssLimit,
+          ),
+          slug: (opts?.rssSlug ?? "scribbles") as FullSlug,
+          ext: ".xml",
+        })
       }
 
       const fp = joinSegments("static", "contentIndex") as FullSlug

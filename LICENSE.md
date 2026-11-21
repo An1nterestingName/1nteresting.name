@@ -1,3 +1,16 @@
+# Site License
+This applies to everything found in the `content/` directory unless otherwise specified.
+
+© An1nterestingName 2024-2026.
+
+Content may not be replicated or altered without explicit permission.
+
+Images or short extracts may be displayed provided a link to the page they were sourced from is placed alongside them. 
+
+# Quartz License
+This applies to the source code of [Quartz](https://quartz.jzhao.xyz) included within this repository.
+
+```
 MIT License
 
 Copyright (c) 2021 jackyzha0
@@ -19,3 +32,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```

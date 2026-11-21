@@ -1,17 +1,8 @@
-# Quartz v5
+# Sitev3
+The work-in-progress v3.0.0 for [1nteresting.name](https://1nteresting.name). Based on [Quartz 5](https://quartz.jzhao.xyz).
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+## Changes from "Sitev2"
+- Upgraded from Quartz 4 -> Quartz 5
+- Introduction of [Semantic Versioning](https://semver.org)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Note that feature parity has not yet been achieved, that is the goal before this replaces the production site.

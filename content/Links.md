@@ -29,6 +29,21 @@ Below, you can find various important links. Most people would have this be thei
         <div class="username">An1nterestingName</div>
         I play games fast. All my runs are avaliable on a playlist on my YouTube channel as well.
     </a>
+    <a class="platform-container" href="https://to.1nteresting.name/games" target="_blank">
+        <div class="platform-title">GAMEYE</div>
+        <div class="username">@an1nterestingname</div>
+        A tracker for my game and console collection.
+    </a>
+    <a class="platform-container" href="https://to.1nteresting.name/bs" target="_blank">
+        <div class="platform-title">BeatLeader</div>
+        <div class="username">An1nterestingName</div>
+        My profile on the leaderboard for custom maps in the VR rhythm game, Beat Saber.
+    </a>
+    <a class="platform-container" href="https://to.1nteresting.name/osu" target="_blank">
+        <div class="platform-title">osu!</div>
+        <div class="username">1nterestingName</div>
+        My profile in the rhythm game, osu!
+    </a>
     <a class="platform-container" href="https://to.1nteresting.name/email" target="_blank">
         <div class="platform-title">Email</div>
         <div class="username">name@1nteresting.name</div>

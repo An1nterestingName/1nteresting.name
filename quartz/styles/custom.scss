@@ -46,6 +46,8 @@ $br-strong: 100px;
   }
 }
 
+// --- Individual Elements ---
+
 .page-title {
     @include neu-popout(4px);
     border-radius: $br-strong;
@@ -82,7 +84,23 @@ $br-strong: 100px;
     margin: 0
 }
 
-// --- Specific Elements ---
+.search-button {
+    @include neu-popout(4px);
+    border-radius: $br-strong;
+    border: transparent;
+}
+
+.darkmode, .readermode {
+    @include neu-popout(4px);
+    border-radius: $br-strong;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    padding-right: 20px;
+    margin-top: 4px;
+}
+
+// --- Page-specific Elements ---
 
 // /index
 .home-title {

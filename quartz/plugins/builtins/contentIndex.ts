@@ -7,7 +7,6 @@ import { getDate } from "@quartz-community/utils"
 import { ContentIndexConfig, GlobalConfiguration } from "../../cfg"
 import { BuildCtx } from "../../util/ctx"
 import { escapeHTML } from "../../util/escape"
-import { i18n } from "../../i18n"
 import { FilePath, FullSlug, SimpleSlug, joinSegments, simplifySlug } from "../../util/path"
 import { ContentDetails, ContentIndexExtension, QuartzEmitterPlugin } from "../types"
 import { ProcessedContent, QuartzPluginData } from "../vfile"
@@ -212,7 +211,6 @@ function generateRSSFeed(
   limit?: number,
 ): string {
   const base = cfg.baseUrl ?? ""
-  const pageTitle = cfg.pageTitle ?? ""
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<item>
     <title>${escapeHTML(content.title)}</title>
     <link>https://${joinSegments(base, encodeURI(slug))}</link>
@@ -233,13 +231,10 @@ function generateRSSFeed(
     .slice(0, limit ?? idx.size)
     .join("")
 
-  const rss = i18n(cfg.locale).pages.rss
-  const description = `${limit ? rss.lastFewNotes({ count: limit }) : rss.recentNotes} on ${escapeHTML(pageTitle)}`
-
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>$feedName}</title>
+      <title>${feedName}</title>
       <link>https://${base}</link>
       <description>${feedDesc}</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>

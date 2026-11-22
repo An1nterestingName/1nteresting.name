@@ -279,15 +279,7 @@ layout:
         left: []
         right: []
     content: {}
-    folder:
-      exclude:
-        - reader-mode
-      positions:
-        right: []
-    tag:
-      exclude:
-        - reader-mode
-      positions:
-        right: []
+    folder: {}
+    tag: {}
     canvas: {}
     bases: {}

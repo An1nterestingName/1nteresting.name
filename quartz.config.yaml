@@ -265,21 +265,6 @@ plugins:
     enabled: true
     options: {}
     order: 50
-  - source: "@quartz-community/note-properties"
-    enabled: true
-    options:
-      includeAll: false
-      includedProperties:
-        - description
-        - tags
-        - aliases
-      excludedProperties: []
-      hidePropertiesView: false
-    order: 5
-    layout:
-      position: beforeBody
-      priority: 15
-      display: all
 layout:
   groups:
     toolbar:

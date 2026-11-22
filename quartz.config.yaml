@@ -260,8 +260,11 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        All Pages: /Explorer
+        RSS Feed: /RSS-Guide
+        Source Code: https://to.1nteresting.name/gh/1nteresting.name
+        Color Theme: https://catppuccin.com/
+        Design Style: https://neumorphism.io/
     order: 50
 layout:
   groups:

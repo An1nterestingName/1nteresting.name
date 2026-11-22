@@ -24,16 +24,16 @@ $br-strong: 100px;
 
 // "pop-out" effect for neumorphic elements
 @mixin neu-popout($offset) {
-    box-shadow:
-        $offset $offset $neu-blur var(--neu-dark),
-        calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light);
+  box-shadow:
+    $offset $offset $neu-blur var(--neu-dark),
+    calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light);
 }
 
 // "pop-in" effect for neumorphic elements
 @mixin neu-popin($offset) {
-    box-shadow:
-        $offset $offset $neu-blur var(--neu-dark) inset,
-        calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light) inset;
+  box-shadow:
+    $offset $offset $neu-blur var(--neu-dark) inset,
+    calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light) inset;
 }
 
 // --- Generic Elements ---
@@ -49,68 +49,92 @@ $br-strong: 100px;
 // --- Individual Elements ---
 
 .page-title {
-    @include neu-popout(4px);
-    border-radius: $br-strong;
-    text-align: center;
+  @include neu-popout(4px);
+  border-radius: $br-strong;
+  text-align: center;
 }
 
 .page-header {
-    @include neu-popout(4px);
-    border-radius: $br-regular;
-    padding: 0 7px;
-    .popover-hint {
-        margin: 2px 0;
-    }
+  @include neu-popout(4px);
+  border-radius: $br-regular;
+  padding: 0 7px;
+  .popover-hint {
+    margin: 2px 0;
+  }
 
-    // Applies to any CHILD of .page-container if it has a child with class .breadcrumb-container
-    :has(.breadcrumb-container) {
-        padding-top: 4px;
-    }
+  // Applies to any CHILD of .page-container if it has a child with class .breadcrumb-container
+  :has(.breadcrumb-container) {
+    padding-top: 4px;
+  }
 }
 
 // Applies TO .page-container if it has a child with class .breadcrumb-container
 .page-header:has(.breadcrumb-container) {
-    border-radius: 30px 30px 10px 10px;
+  border-radius: 30px 30px 10px 10px;
 }
 
 .breadcrumb-container {
-    @include neu-popin(4px);
-    border-radius: $br-strong;
-    margin: 8px;
-    padding: 10px;
+  @include neu-popin(4px);
+  border-radius: $br-strong;
+  margin: 8px;
+  padding: 10px;
 }
 
 .article-title {
-    margin: 0
+  margin: 0;
 }
 
 .search-button {
-    @include neu-popout(4px);
-    border-radius: $br-strong;
-    border: transparent;
+  @include neu-popout(4px);
+  border-radius: $br-strong;
+  border: transparent;
 }
 
-.darkmode, .readermode {
-    @include neu-popout(4px);
-    border-radius: $br-strong;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    padding-right: 20px;
-    margin-top: 4px;
+.darkmode,
+.readermode {
+  @include neu-popout(4px);
+  border-radius: $br-strong;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-right: 20px;
+  margin-top: 4px;
 }
 
 .graph {
-    @include neu-popout(4px);
-    border-radius: $br-regular;
-    padding: 10px;
+  @include neu-popout(4px);
+  border-radius: $br-regular;
+  padding: 10px;
+  text-align: center;
 }
 
 .graph-outer {
-    @include neu-popin(4px);
-    border-radius: $br-regular;
-    border: transparent;
-    margin-bottom: 0;
+  @include neu-popin(4px);
+  border-radius: $br-regular;
+  border: transparent;
+  margin-bottom: 0;
+}
+
+.toc {
+  @include neu-popout(4px);
+  border-radius: $br-regular;
+  padding: 10px;
+}
+
+.toc-header {
+  justify-content: center;
+}
+
+.toc-content {
+  @include neu-popin(4px);
+  border-radius: $br-regular;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  width: revert;
+  // If I end up editing the TOC plugin, this element should just be removed from there.
+  .overflow-end {
+    display: none;
+  }
 }
 
 // --- Page-specific Elements ---

@@ -192,11 +192,6 @@ plugins:
     layout:
       position: beforeBody
       priority: 10
-  - source: "@quartz-community/content-meta"
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 20
   - source: "@quartz-community/tag-list"
     enabled: false
     layout:
@@ -266,6 +261,15 @@ plugins:
         Color Theme: https://catppuccin.com/
         Design Style: https://neumorphism.io/
     order: 50
+  - source: ./custom-plugins/content-meta/
+    enabled: true
+    options:
+      showReadingTime: true
+      showComma: true
+    order: 50
+    layout:
+      position: beforeBody
+      priority: 20
 layout:
   groups:
     toolbar:

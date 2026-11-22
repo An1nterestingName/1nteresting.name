@@ -1,5 +1,29 @@
 @use "./variables.scss" as *;
 
+// --- Globals ---
+// Dark mode
+[saved-theme="dark"] body {
+  --neu-background: #1e1e2e;
+
+  --neu-dark: #12121c;
+  --neu-light: #2a2a40;
+}
+
+// Light mode
+[saved-theme="light"] body {
+  --neu-background: #eff1f5;
+
+  --neu-dark: #b8babd;
+  --neu-light: #ffffff;
+}
+
+// "pop-out" effect for neumorphic elements
+@mixin neu-popout($offset) {
+    box-shadow:
+        $offset $offset 10px var(--neu-dark),
+        calc(0px - $offset) calc(0px - $offset) 10px var(--neu-light);
+}
+
 // --- Generic Elements ---
 .flex-row {
   display: flex;
@@ -8,6 +32,12 @@
   p {
     margin: 0px;
   }
+}
+
+.page-title {
+    @include neu-popout(4px);
+    border-radius: 100px;
+    text-align: center;
 }
 
 // --- Specific Elements ---

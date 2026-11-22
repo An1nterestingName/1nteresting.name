@@ -4,12 +4,12 @@ comments: false
 ---
 
 <div style="padding-top: 100px">
-    <h1 class="hide-link flex-container" style="font-size: 64px; color: var(--secondary);">
+    <h1 class="flex-row home-title">
         <div>An</div>
         <div>1nteresting</div>
         <div>Name</div>
     </h1>
-    <h1 class="hide-link" style="margin-top: 0.5rem; font-size: 20px;">Software Developer, Photographer, Speedrunner and Professional Procrastinator.</h1>
+    <h1 class="home-subtitle">Software Developer, Photographer, Speedrunner and Professional Procrastinator.</h1>
 </div>
 
 Welcome to my website!

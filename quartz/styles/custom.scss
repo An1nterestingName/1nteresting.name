@@ -1,3 +1,24 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// --- Generic Elements ---
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  p {
+    margin: 0px;
+  }
+}
+
+// --- Specific Elements ---
+
+// /index
+.home-title {
+  font-size: 64px;
+  color: var(--secondary);
+}
+
+.home-subtitle {
+  margin-top: 0.5rem;
+  font-size: 20px;
+}

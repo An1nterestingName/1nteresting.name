@@ -17,21 +17,23 @@
   --neu-light: #ffffff;
 }
 
+$neu-blur: 8px; // Global blur value for neumorphic elements
+
 $br-regular: 10px;
 $br-strong: 100px;
 
 // "pop-out" effect for neumorphic elements
 @mixin neu-popout($offset) {
     box-shadow:
-        $offset $offset 10px var(--neu-dark),
-        calc(0px - $offset) calc(0px - $offset) 10px var(--neu-light);
+        $offset $offset $neu-blur var(--neu-dark),
+        calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light);
 }
 
 // "pop-in" effect for neumorphic elements
 @mixin neu-popin($offset) {
     box-shadow:
-        $offset $offset 10px var(--neu-dark) inset,
-        calc(0px - $offset) calc(0px - $offset) 10px var(--neu-light) inset;
+        $offset $offset $neu-blur var(--neu-dark) inset,
+        calc(0px - $offset) calc(0px - $offset) $neu-blur var(--neu-light) inset;
 }
 
 // --- Generic Elements ---

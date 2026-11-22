@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "plugins": {
+    "footer": {
+      "source": "./custom-plugins/footer",
+      "resolved": "/mnt/Shared/sitev3/custom-plugins/footer",
+      "commit": "local",
+      "installedAt": "2026-11-22T19:21:19.581Z"
+    }
+  }
+}

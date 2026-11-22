@@ -34,14 +34,6 @@ export default ((opts?: FooterOptions) => {
     const links = opts?.links ?? [];
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>
-          {i18n(cfg?.locale ?? "en-US").components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz{version ? ` v${version}` : ""}</a> &copy;{" "}
-          {year}
-        </p>
-        {opts?.message ? (
-          <p class="footer-message" dangerouslySetInnerHTML={{ __html: opts.message }} />
-        ) : null}
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
@@ -49,6 +41,19 @@ export default ((opts?: FooterOptions) => {
             </li>
           ))}
         </ul>
+        <div class="flex-row footer-textbox">
+          <p>© An1nterestingName 2024-2026</p>
+          <p>
+            Built with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> (© jackyzha0 {year}
+            )
+          </p>
+          <p>
+            Hosted on <a href="https://pages.github.com">GitHub Pages</a>
+          </p>
+          <p>
+            Comments powered by <a href="https://giscus.app">giscus</a>
+          </p>
+        </div>
       </footer>
     );
   };

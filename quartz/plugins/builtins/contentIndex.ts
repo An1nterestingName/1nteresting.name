@@ -203,7 +203,14 @@ function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
 }
 
-function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?: number): string {
+function generateRSSFeed(
+  path: string,
+  feedDesc: string,
+  feedName: string,
+  cfg: GlobalConfiguration,
+  idx: ContentIndexMap,
+  limit?: number,
+): string {
   const base = cfg.baseUrl ?? ""
   const pageTitle = cfg.pageTitle ?? ""
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<item>
@@ -221,6 +228,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
       if (!f1.date && f2.date) return 1
       return f1.title.localeCompare(f2.title)
     })
+    .filter(([slug, _content]) => slug.startsWith(path) && !slug.includes("index"))
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
     .slice(0, limit ?? idx.size)
     .join("")
@@ -231,9 +239,9 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>${escapeHTML(pageTitle)}</title>
+      <title>$feedName}</title>
       <link>https://${base}</link>
-      <description>${description}</description>
+      <description>${feedDesc}</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       ${items}
     </channel>
@@ -263,12 +271,36 @@ export const ContentIndex: QuartzEmitterPlugin<ContentIndexConfig> = (userOpts) 
       outputs.push(await write(ctx, "sitemap", ".xml", generateSiteMap(cfg, index)))
     }
     if (opts.enableRSS) {
+      // Blog
       outputs.push(
         await write(
           ctx,
-          opts.rssSlug ?? "index",
+          "blog",
           ".xml",
-          generateRSSFeed(cfg, index, opts.rssLimit),
+          generateRSSFeed(
+            "blog",
+            "Last 10 Blog Posts from 1nteresting.name",
+            "An1nterestingName's Blog",
+            cfg,
+            index,
+            opts.rssLimit,
+          ),
+        ),
+      )
+      // Scribbles
+      outputs.push(
+        await write(
+          ctx,
+          "scribbles",
+          ".xml",
+          generateRSSFeed(
+            "scribbles",
+            "Last 10 Scribbles from 1nteresting.name",
+            "An1nterestingName's Scribbles",
+            cfg,
+            index,
+            opts.rssLimit,
+          ),
         ),
       )
     }

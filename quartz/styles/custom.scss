@@ -17,11 +17,21 @@
   --neu-light: #ffffff;
 }
 
+$br-regular: 10px;
+$br-strong: 100px;
+
 // "pop-out" effect for neumorphic elements
 @mixin neu-popout($offset) {
     box-shadow:
         $offset $offset 10px var(--neu-dark),
         calc(0px - $offset) calc(0px - $offset) 10px var(--neu-light);
+}
+
+// "pop-in" effect for neumorphic elements
+@mixin neu-popin($offset) {
+    box-shadow:
+        $offset $offset 10px var(--neu-dark) inset,
+        calc(0px - $offset) calc(0px - $offset) 10px var(--neu-light) inset;
 }
 
 // --- Generic Elements ---
@@ -36,8 +46,38 @@
 
 .page-title {
     @include neu-popout(4px);
-    border-radius: 100px;
+    border-radius: $br-strong;
     text-align: center;
+}
+
+.page-header {
+    @include neu-popout(4px);
+    border-radius: $br-regular;
+    padding: 0 7px;
+    .popover-hint {
+        margin: 2px 0;
+    }
+
+    // Applies to any CHILD of .page-container if it has a child with class .breadcrumb-container
+    :has(.breadcrumb-container) {
+        padding-top: 4px;
+    }
+}
+
+// Applies TO .page-container if it has a child with class .breadcrumb-container
+.page-header:has(.breadcrumb-container) {
+    border-radius: 30px 30px 10px 10px;
+}
+
+.breadcrumb-container {
+    @include neu-popin(4px);
+    border-radius: $br-strong;
+    margin: 8px;
+    padding: 10px;
+}
+
+.article-title {
+    margin: 0
 }
 
 // --- Specific Elements ---

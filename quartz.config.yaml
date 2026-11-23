@@ -187,11 +187,6 @@ plugins:
     layout:
       position: right
       priority: 50
-  - source: "@quartz-community/article-title"
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 10
   - source: "@quartz-community/tag-list"
     enabled: false
     layout:
@@ -270,6 +265,13 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
+  - source: ./custom-plugins/article-title
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: beforeBody
+      priority: 10
 layout:
   groups:
     toolbar:

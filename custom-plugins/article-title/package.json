@@ -1,0 +1,105 @@
+{
+  "name": "custom-article-title",
+  "version": "1.1.0-custom",
+  "description": "ArticleTitle component for Quartz - displays the page title as an h1",
+  "type": "module",
+  "license": "MIT",
+  "author": "Quartz Community, An1nterestingName",
+  "homepage": "https://1nteresting.name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quartz-community/article-title"
+  },
+  "keywords": [
+    "quartz",
+    "quartz-plugin",
+    "article-title",
+    "component"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier . --check",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run format && npm run test",
+    "prepublishOnly": "npm run build",
+    "release": "npm run build && changeset publish",
+    "version-packages": "changeset version && npm install --package-lock-only --ignore-scripts --no-audit --no-fund"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "preact": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@quartz-community/types": "^1.0.0",
+    "@quartz-community/utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "preact": "^10.28.2",
+    "prettier": "^3.6.2",
+    "sass": "^1.97.3",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vfile": "^6.0.3",
+    "vitest": "^2.1.9",
+    "@changesets/cli": "^2.29.2"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10.9.2"
+  },
+  "quartz": {
+    "name": "article-title",
+    "displayName": "Article Title",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "ArticleTitle": {
+        "displayName": "Article Title",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 10
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

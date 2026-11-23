@@ -1,6 +1,12 @@
 {
   "version": "1.0.0",
   "plugins": {
+    "article-title": {
+      "source": "./custom-plugins/article-title",
+      "resolved": "/mnt/Shared/sitev3/custom-plugins/article-title",
+      "commit": "local",
+      "installedAt": "2026-11-23T20:37:39.398Z"
+    },
     "content-meta": {
       "source": "./custom-plugins/content-meta/",
       "resolved": "/mnt/Shared/sitev3/custom-plugins/content-meta",

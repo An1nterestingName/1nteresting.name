@@ -7,7 +7,7 @@ import { classNames } from "../util/lang";
 
 const ArticleTitle: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const title = (fileData.frontmatter as { title?: string } | undefined)?.title;
-  if (title) {
+  if (title && fileData.slug != "index") {
     // `inline-title` is Obsidian's class for the note title, so Obsidian themes style it.
     return <h1 class={classNames(displayClass, "article-title", "inline-title")}>{title}</h1>;
   } else {

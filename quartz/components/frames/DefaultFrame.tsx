@@ -3,6 +3,25 @@ import HeaderConstructor from "../Header"
 
 const Header = HeaderConstructor()
 
+// This is an incredibly dumb way to handle grouping ArticleTitle and ContentMeta into a div,
+// but it works and I have no clue how to do anything better.
+//
+// I also have no clue how to make it not be an implicit any, and it causes no issues, so I'm just going to ignore it.
+const BeforeBodyComponent = ({componentData, beforeBody}) => {
+  let BreadcrumbContainer = beforeBody[0]
+  let ArticleTitle = beforeBody[1]
+  let ContentMeta = beforeBody[2]
+  return (
+    <div class="popover-hint">
+      <BreadcrumbContainer {...componentData} />
+      <div class="page-title-container">
+        <ArticleTitle {...componentData} />
+        <ContentMeta {...componentData} />
+      </div>
+    </div>
+  )
+}
+
 /**
  * The default page frame — three-column layout with left sidebar, center
  * content (header + body + afterBody), and right sidebar, followed by a footer.
@@ -22,6 +41,7 @@ export const DefaultFrame: PageFrame = {
     footer,
     sidebars,
   }: PageFrameProps) {
+
     return (
       <>
         <div class="left sidebar" data-sidebar-mode={sidebars?.left ?? "fit"}>
@@ -36,11 +56,7 @@ export const DefaultFrame: PageFrame = {
                 <HeaderComponent {...componentData} />
               ))}
             </Header>
-            <div class="popover-hint">
-              {beforeBody.map((BodyComponent) => (
-                <BodyComponent {...componentData} />
-              ))}
-            </div>
+            <BeforeBodyComponent componentData={componentData} beforeBody={beforeBody} />
           </div>
           <Content {...componentData} />
           <hr />

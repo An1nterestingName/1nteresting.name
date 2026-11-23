@@ -20,7 +20,9 @@
 $neu-blur: 8px; // Global blur value for neumorphic elements
 
 $br-regular: 10px;
+$br-regular-outer: 15px;
 $br-strong: 100px;
+$br-strong-outer: 30px;
 
 // "pop-out" effect for neumorphic elements
 @mixin neu-popout($offset) {
@@ -56,21 +58,16 @@ $br-strong: 100px;
 
 .page-header {
   @include neu-popout(4px);
-  border-radius: $br-regular;
-  padding: 0 7px;
+  border-radius: $br-strong-outer $br-strong-outer $br-regular-outer $br-regular-outer;
+  padding: 0 6px;
   .popover-hint {
     margin: 2px 0;
   }
 
   // Applies to any CHILD of .page-container if it has a child with class .breadcrumb-container
   :has(.breadcrumb-container) {
-    padding-top: 4px;
+    padding: 4px 0;
   }
-}
-
-// Applies TO .page-container if it has a child with class .breadcrumb-container
-.page-header:has(.breadcrumb-container) {
-  border-radius: 30px 30px 10px 10px;
 }
 
 .breadcrumb-container {
@@ -80,8 +77,19 @@ $br-strong: 100px;
   padding: 10px;
 }
 
+.page-title-container {
+    @include neu-popin(4px);
+    border-radius: $br-regular;
+    margin: 8px;
+    padding: 5px 10px;
+}
+
 .article-title {
   margin: 0;
+}
+
+.content-meta {
+    margin-bottom: 0;
 }
 
 .search-button {
@@ -101,13 +109,15 @@ $br-strong: 100px;
   margin-top: 4px;
 }
 
+// Despite the name, thia is the OUTER part of the graph element.
 .graph {
   @include neu-popout(4px);
-  border-radius: $br-regular;
+  border-radius: $br-regular-outer;
   padding: 10px;
   text-align: center;
 }
 
+// Despite the name, this is the INNER part of the graph element
 .graph-outer {
   @include neu-popin(4px);
   border-radius: $br-regular;

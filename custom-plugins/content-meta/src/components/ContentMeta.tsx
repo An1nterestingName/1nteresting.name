@@ -31,7 +31,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text;
 
-    if (text) {
+    if (text && fileData.slug != "index") {
       const segments: (string | JSX.Element)[] = [];
 
       if (fileData.dates) {

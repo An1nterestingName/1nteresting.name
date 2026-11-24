@@ -147,30 +147,30 @@ plugins:
         drag: true
         zoom: true
         depth: -1
-        scale: 1
-        repelForce: 1
+        scale: 1.1
+        repelForce: 0.1
         centerForce: 0.3
-        linkDistance: 30
+        linkDistance: 20
         fontSize: 0.6
         opacityScale: 1
         removeTags: []
         showTags: true
         focusOnHover: false
-        enableRadial: false
+        enableRadial: true
       globalGraph:
         drag: true
         zoom: true
         depth: -1
-        scale: 1
-        repelForce: 1
+        scale: 0.9
+        repelForce: 0.1
         centerForce: 0.2
         linkDistance: 30
-        fontSize: 0.4
+        fontSize: 0.6
         opacityScale: 1
         removeTags: []
         showTags: true
         focusOnHover: true
-        enableRadial: false
+        enableRadial: true
     layout:
       position: right
       priority: 10

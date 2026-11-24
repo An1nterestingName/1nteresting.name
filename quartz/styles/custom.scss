@@ -84,6 +84,10 @@ $br-strong-outer: 30px;
     padding: 5px 10px;
 }
 
+.page-title-container:empty {
+    display: none
+}
+
 .article-title {
   margin: 0;
 }

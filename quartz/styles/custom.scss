@@ -48,6 +48,35 @@ $br-strong-outer: 30px;
   }
 }
 
+.pill-container {
+    @include neu-popout(4px);
+    padding: 8px;
+    border-radius: $br-strong-outer;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill-item {
+    @include neu-popin(4px);
+    padding: 4px 8px 2px;
+    border-radius: $br-strong;
+    background-color: var(--neu-background);
+    transition: all 0.1s ease;
+    border: 2px solid transparent;
+}
+
+.pill-item:hover {
+    @include neu-popout(4px);
+    border: 2px solid var(--secondary);
+}
+
+.pill-item:active {
+    scale: 0.9;
+}
+
 // --- Individual Elements ---
 
 .page-title {

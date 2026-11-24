@@ -17,7 +17,7 @@ tags:
 This is a small script designed to allow [pycord](https://github.com/Pycord-Development/pycord) 2.6 to run on Python 3.13, which deprecates the audioop module. It downloads the patch from the development build of 2.7, and applies it to your current version.
 
 <div class="pill-container">
-    <div class="pill-item"><a href="https://gist.github.com/An1nterestingName/41a74562163722161427895686436c51">View GitHub Gist</a></div>
+    <a class="pill-item" href="https://gist.github.com/An1nterestingName/41a74562163722161427895686436c51">View GitHub Gist</a>
 </div>
 
 # Versions

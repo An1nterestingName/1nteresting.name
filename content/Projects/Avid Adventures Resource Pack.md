@@ -21,7 +21,7 @@ To use the pack, you must have [CIT Resewn](https://modrinth.com/mod/cit-resewn)
 Minecraft Version: 1.20.1
 
 <div class="pill-container">
-    <div class="pill-item"><a href="https://to.1nteresting.name/avidpack/discord">Join the Discord</a></div>
+    <a class="pill-item" href="https://to.1nteresting.name/avidpack/discord">Join the Discord</a>
 </div>
 
 # Images

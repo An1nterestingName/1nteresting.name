@@ -23,7 +23,7 @@ In this map, you must climb your way up Xaleem's Central Tower by defeating Mini
 Minecraft Version: 1.20.4
 
 <div class="pill-container">
-    <div class="pill-item"><a href="https://www.planetminecraft.com/project/acc4-the-spires-of-otherside">View on PlanetMinecraft</a></div>
+    <a class="pill-item" href="https://www.planetminecraft.com/project/acc4-the-spires-of-otherside">View on PlanetMinecraft</a>
 </div>
 
 # Images

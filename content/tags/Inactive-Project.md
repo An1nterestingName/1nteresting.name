@@ -7,5 +7,5 @@ comments: false
 > That means that there will be no more updates to these projects unless they are marked as Active again.
 
 <div class="pill-container">
-    <div class="pill-item"><a href="/Projects">Back to All Projects</a></div>
+    <a class="pill-item" href="/Projects">Back to All Projects</a>
 </div>

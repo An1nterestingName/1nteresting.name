@@ -44,7 +44,7 @@ Anyway, I've said everything I want to about this project, and I urge you to che
 *that is all*
 
 <div class="pill-container">
-    <div class="pill-item"><a href="https://blocks.1nteresting.name">Try it out</a></div>
-    <div class="pill-item"><a href="/Projects/Minecraft-Block-List">Project Page</a></div>
-    <div class="pill-item"><a href="https://to.1nteresting.name/blocks/repo">GitHub Repository</a></div>
+    <a class="pill-item" href="https://blocks.1nteresting.name">Try it out</a>
+    <a class="pill-item" href="/Projects/Minecraft-Block-List">Project Page</a>
+    <a class="pill-item" href="https://to.1nteresting.name/blocks/repo">GitHub Repository</a>
 </div>

@@ -153,9 +153,9 @@ $br-strong-outer: 30px;
 
 footer {
     @include neu-popout(4px);
-    border-radius: $br-regular;
-    padding: 30px 10px 10px 10px;
-    margin: 2rem auto 1rem auto;
+    border-radius: $br-regular $br-regular 0 0;
+    padding: 25px 10px 10px 10px;
+    margin: 2rem auto 0 auto;
     min-width: calc(100% - 20px);
     max-width: calc(100% - 20px);
     opacity: 1;

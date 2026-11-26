@@ -4,6 +4,7 @@ tags:
   - Splatoon
   - Splatoon3
   - Art
+socialImage: https://assets.1nteresting.name/scribble/2026/s_rank/full.webp
 ---
 ![](https://assets.1nteresting.name/scribble/2026/s_rank/full.webp)
 

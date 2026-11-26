@@ -3,6 +3,7 @@ date: 2026-09-17
 tags:
   - Minecraft
   - Art
+socialImage: https://assets.1nteresting.name/scribble/2026/dappled_forest/drawing.png
 ---
 ![](https://assets.1nteresting.name/scribble/2026/dappled_forest/drawing.png)
 

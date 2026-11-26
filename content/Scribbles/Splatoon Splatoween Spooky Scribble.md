@@ -4,6 +4,7 @@ tags:
   - Splatoon
   - Splatoon3
   - Art
+socialImage: https://assets.1nteresting.name/scribble/2026/splatoon_splatoween_spooky_scribble/drawing02.webp
 ---
 ![](https://assets.1nteresting.name/scribble/2026/splatoon_splatoween_spooky_scribble/drawing02.webp)
 
